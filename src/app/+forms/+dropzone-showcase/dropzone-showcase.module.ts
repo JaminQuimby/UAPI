@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { dropzoneShowcaseRouting } from './dropzone-showcase.routing';
-import {SmartadminModule} from "../../shared/smartadmin.module";
+import {uapiModule} from "../../shared/uapi.module";
 import {DropzoneModule} from "../../shared/forms/dropzone/dropzone.module";
 import {DropzoneShowcaseComponent} from "./dropzone-showcase.component";
 
@@ -9,7 +9,7 @@ import {DropzoneShowcaseComponent} from "./dropzone-showcase.component";
   imports: [
     CommonModule,
     dropzoneShowcaseRouting,
-    SmartadminModule,
+    uapiModule,
     DropzoneModule
   ],
   declarations: [DropzoneShowcaseComponent]

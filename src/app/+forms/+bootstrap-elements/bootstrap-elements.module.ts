@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapElementsRouting } from './bootstrap-elements.routing';
 import {BootstrapElementsComponent} from "./bootstrap-elements.component";
-import {SmartadminModule} from "../../shared/smartadmin.module";
+import {uapiModule} from "../../shared/uapi.module";
 
 @NgModule({
   imports: [
     CommonModule,
     bootstrapElementsRouting,
-    SmartadminModule
+    uapiModule
   ],
   declarations: [BootstrapElementsComponent]
 })

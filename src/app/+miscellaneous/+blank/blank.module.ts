@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlankRoutingModule } from './blank-routing.module';
 import { BlankComponent } from './blank.component';
-import {SmartadminLayoutModule} from "../../shared/layout/layout.module";
+import {uapiLayoutModule} from "../../shared/layout/layout.module";
 import {StatsModule} from "../../shared/stats/stats.module";
-import {SmartadminWidgetsModule} from "../../shared/widgets/smartadmin-widgets.module";
+import {uapiWidgetsModule} from "../../shared/widgets/uapi-widgets.module";
 
 @NgModule({
   imports: [
     CommonModule,
     BlankRoutingModule,
 
-    SmartadminLayoutModule,
+    uapiLayoutModule,
 		StatsModule,
-    SmartadminWidgetsModule,
+    uapiWidgetsModule,
   ],
   declarations: [BlankComponent]
 })

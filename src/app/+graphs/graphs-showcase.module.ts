@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 
-import { SmartadminModule } from '../shared/smartadmin.module'
+import { uapiModule } from '../shared/uapi.module'
 
 
 import {SparklinesComponent} from "./+sparklines/sparklines.component";
@@ -16,7 +16,7 @@ import {InlineGraphsModule} from "../shared/graphs/inline/inline-graphs.module";
       EasyPieChartsComponent,
     ],
     imports: [
-        SmartadminModule,
+        uapiModule,
         routing
     ],
     providers: [],

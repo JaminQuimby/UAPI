@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PostViewRoutingModule} from './post-view-routing.module';
 import {PostViewComponent} from './post-view.component';
-import {SmartadminLayoutModule} from "../../../shared/layout/layout.module";
+import {uapiLayoutModule} from "../../../shared/layout/layout.module";
 import {StatsModule} from "../../../shared/stats/stats.module";
 
 @NgModule({
@@ -10,7 +10,7 @@ import {StatsModule} from "../../../shared/stats/stats.module";
     CommonModule,
     PostViewRoutingModule,
 
-    SmartadminLayoutModule,
+    uapiLayoutModule,
     StatsModule,
   ],
   declarations: [PostViewComponent]

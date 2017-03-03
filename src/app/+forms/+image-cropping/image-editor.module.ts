@@ -1,7 +1,7 @@
 
 
 import {NgModule} from "@angular/core";
-import {SmartadminModule} from "../../shared/smartadmin.module";
+import {uapiModule} from "../../shared/uapi.module";
 
 import {routing} from "./image-editor.routing";
 import {ImageEditorComponent} from "./image-editor.component";
@@ -21,7 +21,7 @@ import { StylingPanelComponent } from './styling-panel/styling-panel.component';
 @NgModule({
   imports: [routing,
     NgReduxModule.forRoot(),
-    SmartadminModule, JcropModule, TabsModule],
+    uapiModule, JcropModule, TabsModule],
   declarations: [ImageEditorComponent, DefaultPanelComponent, ApiPanelComponent, ShowSelectionPanelComponent, PreviewPanelComponent, AnimationsPanelComponent, StylingPanelComponent],
   exports: [ImageEditorComponent],
   providers: [],

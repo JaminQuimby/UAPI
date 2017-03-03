@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 
-import {SmartadminModule} from '../shared/smartadmin.module'
+import {uapiModule} from '../shared/uapi.module'
 
 import {routing} from './tables.routing';
 import {NormalTablesComponent} from "./+normal-tables/normal-tables.component";
 import {DatatablesShowcaseComponent} from "./+datatables-showcase/datatables-showcase.component";
-import {SmartadminDatatableModule} from "../shared/ui/datatable/smartadmin-datatable.module";
+import {uapiDatatableModule} from "../shared/ui/datatable/uapi-datatable.module";
 import { DatatablesRestDemoComponent } from './+datatables-showcase/datatables-rest-demo.component';
 
 @NgModule({
@@ -13,8 +13,8 @@ import { DatatablesRestDemoComponent } from './+datatables-showcase/datatables-r
     NormalTablesComponent, DatatablesShowcaseComponent, DatatablesRestDemoComponent
   ],
   imports: [
-    SmartadminModule,
-    SmartadminDatatableModule,
+    uapiModule,
+    uapiDatatableModule,
 
     routing
   ],

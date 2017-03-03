@@ -24,7 +24,7 @@ export class DygraphComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    // to improve latency for big components smartadmin app we are loading dependency async
+    // to improve latency for big components uapi app we are loading dependency async
     System.import('dygraphs').then((Dygraph)=> {
       new Dygraph(this.el.nativeElement.children[0], this.data, this.options)
     })

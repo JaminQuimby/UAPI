@@ -2,20 +2,20 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ProjectsListRoutingModule} from './projects-list-routing.module';
 import {ProjectsListComponent} from './projects-list.component';
-import {SmartadminDatatableModule} from "../../shared/ui/datatable/smartadmin-datatable.module";
-import {SmartadminLayoutModule} from "../../shared/layout/layout.module";
+import {uapiDatatableModule} from "../../shared/ui/datatable/uapi-datatable.module";
+import {uapiLayoutModule} from "../../shared/layout/layout.module";
 import {StatsModule} from "../../shared/stats/stats.module";
-import {SmartadminWidgetsModule} from "../../shared/widgets/smartadmin-widgets.module";
+import {uapiWidgetsModule} from "../../shared/widgets/uapi-widgets.module";
 
 @NgModule({
   imports: [
     CommonModule,
     ProjectsListRoutingModule,
-    SmartadminLayoutModule,
+    uapiLayoutModule,
     StatsModule,
-    SmartadminDatatableModule,
+    uapiDatatableModule,
 
-    SmartadminWidgetsModule,
+    uapiWidgetsModule,
   ],
   declarations: [ProjectsListComponent]
 })

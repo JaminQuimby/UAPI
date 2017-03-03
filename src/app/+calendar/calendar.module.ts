@@ -7,13 +7,13 @@ import {DraggableEvent} from "./draggable-event/draggable-event.directive";
 import {EventsService} from "./shared/events.service";
 import {ExternalEventsComponent} from "./external-events/external-events.component";
 import {CalendarComponent} from "./calendar.component";
-import {SmartadminModule} from "../shared/smartadmin.module";
+import {uapiModule} from "../shared/uapi.module";
 import {routing} from "./calendar.routing";
 import {DropdownModule} from "ng2-bootstrap";
 
 @NgModule({
   imports: [
-    SmartadminModule,
+    uapiModule,
     routing,
     DropdownModule,
   ],

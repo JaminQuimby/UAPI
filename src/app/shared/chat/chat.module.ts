@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
-import {SmartadminWidgetsModule} from "../widgets/smartadmin-widgets.module";
+import {uapiWidgetsModule} from "../widgets/uapi-widgets.module";
 import {ChatService} from "./chat.service";
 import { ChatComponent } from './chat/chat.component';
 import { ChatUsersComponent } from './chat/chat-users.component';
@@ -17,7 +17,7 @@ import {PopoverModule} from "ng2-popover";
 @NgModule({
   imports: [
       PopoverModule,
-    CommonModule, FormsModule, UtilsModule, UserModule, SmartadminWidgetsModule],
+    CommonModule, FormsModule, UtilsModule, UserModule, uapiWidgetsModule],
   declarations: [ChatWidgetComponent, ChatComponent, ChatUsersComponent, ChatBodyComponent, ChatFormComponent, AsideChatComponent, AsideChatUserComponent],
   exports: [ChatWidgetComponent, AsideChatComponent, AsideChatUserComponent ],
   providers: [ChatService]

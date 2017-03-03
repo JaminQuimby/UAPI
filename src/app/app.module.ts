@@ -15,7 +15,7 @@ import { AppState, InternalStateType } from './app.service';
 
 // Core providers
 import {CoreModule} from "./core/core.module";
-import {SmartadminLayoutModule} from "./shared/layout/layout.module";
+import {uapiLayoutModule} from "./shared/layout/layout.module";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -56,7 +56,7 @@ export const firebaseConfig = {
     HttpModule,
 
     CoreModule,
-    SmartadminLayoutModule,
+    uapiLayoutModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
 
 

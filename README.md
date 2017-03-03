@@ -1,4 +1,4 @@
-# Smartadmin
+# uapi
 
 [live](http://sang2-shockwave.rhcloud.com) demo
 
@@ -58,8 +58,8 @@ Checkout `scripts` section in `package.json` for tools launching shortcuts
 |   |       |-- forms
 |   |       |-- graphs
 |   |       ...
-|   |       |-- smartadmin.config.ts  # smartadmin setup file
-|   |       |-- smartadmin.module.ts  # shared module useful for reexport common functionality
+|   |       |-- uapi.config.ts  # uapi setup file
+|   |       |-- uapi.module.ts  # shared module useful for reexport common functionality
 |   |   ...    
 |   |   |-- app.module.ts       # app root module
 |   |   |-- app.resolver.ts     # here you can async fetch data for app before init  
@@ -106,12 +106,12 @@ Checkout `scripts` section in `package.json` for tools launching shortcuts
 write shell scripts for build/deploy/whatever routines automation
 
 
-## Smartadmin Angular 2 templates
+## uapi Angular 2 templates
 
-Smartadmin will be supplied with 3 templates: 
+uapi will be supplied with 3 templates: 
 * *full* - full demo application
 * *blank* - app with simple Home page. All demo pages are also there  but they are excluded from build by default
-* *lite* - good starting point for creating smartadmin app with no extra dependencies (like jquery) 
+* *lite* - good starting point for creating uapi app with no extra dependencies (like jquery) 
 
 
 ## Some useful code stuff
@@ -156,7 +156,7 @@ App is configured for running end-to-end (via [Protractor](http://www.protractor
 * perhaps maps, modals, some graphs, maybe voice-control and knobs...?
 * include chosen modules from `app/shared/` subs into  your app's first 
 * adjust navigation `app/shared/layout/navigation/navigation.component.html` 
-   * (soon navigation will be configurable via json or `smartadmin.config.js`)
+   * (soon navigation will be configurable via json or `uapi.config.js`)
 * run `npm run server:dev:hmr` to start dev server
 * now it's time to get some data, to use in  your project. Or even Big Data? Collect from web API's, social networks, libraries; 
 * explore, transform, display, analyze, edit. Angular 2 is really good for joining pieces together.

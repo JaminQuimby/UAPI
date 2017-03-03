@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 
-import {config} from '../../shared/smartadmin.config'
+import {config} from '../../shared/uapi.config'
 
 const url = 'https://maps.googleapis.com/maps/api/js?key=' + config.GOOGLE_API_KEY + '&callback=__onGoogleLoaded'
 

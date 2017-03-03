@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {SmartadminModule} from '../../shared/smartadmin.module'
+import {uapiModule} from '../../shared/uapi.module'
 
 import {AnalyticsRoutingModule} from './analytics-routing.module';
 import {AnalyticsComponent} from './analytics.component';
@@ -18,7 +18,7 @@ import {D3Module} from "../../shared/graphs/d3/d3.module";
 
 @NgModule({
   imports: [
-    SmartadminModule,
+    uapiModule,
     AnalyticsRoutingModule,
     CalendarModule,
     FlotChartModule,

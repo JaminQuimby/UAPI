@@ -1,6 +1,6 @@
 export {LayoutSwitcherComponent} from './layout-switcher.component';
 export {LayoutService} from './layout.service';
-export {SmartadminLayoutModule} from './layout.module';
+export {uapiLayoutModule} from './layout.module';
 
 export * from './footer'
 export * from './header'

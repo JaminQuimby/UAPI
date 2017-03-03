@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 
-import { SmartadminModule } from '../shared/smartadmin.module'
+import { uapiModule } from '../shared/uapi.module'
 
 import { routing } from './outlook.routing';
 
@@ -12,7 +12,7 @@ import {ReplayComponent} from "./replay/replay.component";
 import {ComposeComponent} from "./compose/compose.component";
 import {OutlookService} from "./shared/outlook.service";
 import {MessageLabelsComponent} from "./shared/message-labels.component";
-import {SmartadminEditorsModule} from "../shared/forms/editors/smartadmin-editors.module";
+import {uapiEditorsModule} from "../shared/forms/editors/uapi-editors.module";
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import {SmartadminEditorsModule} from "../shared/forms/editors/smartadmin-editor
   imports: [
 
 
-    SmartadminModule,
+    uapiModule,
     routing,
 
-    SmartadminEditorsModule,
+    uapiEditorsModule,
   ],
   providers: [OutlookService],
   entryComponents: [OutlookComponent],

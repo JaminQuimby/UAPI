@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { homeRouting } from './home.routing';
-import {SmartadminModule} from "../shared/smartadmin.module";
+import {uapiModule} from "../shared/uapi.module";
 import {HomeComponent} from "./home.component";
 
 @NgModule({
   imports: [
     CommonModule,
     homeRouting,
-      SmartadminModule
+      uapiModule
   ],
   declarations: [HomeComponent]
 })

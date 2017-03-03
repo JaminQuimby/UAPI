@@ -52,7 +52,7 @@ export default [{
     "className": ["event", "bg-color-darken"]
 }, {
     "id": "544c4183be624ef013bb00a1",
-    "title": "Smartadmin Open Day",
+    "title": "uapi Open Day",
     "start": moment().add(7, 'day').startOf('day').add(22, 'hours'),
     "end": moment().add(8, 'day').startOf('day').add(22, 'hours'),
     "className": ["event", "bg-color-darken"]

@@ -6,15 +6,15 @@ import {ButtonGroupFormComponent} from "./button-group-form/button-group-form.co
 import {ProductFormComponent} from "./product-form/product-form.component";
 import {ProfileFormComponent} from "./profile-form/profile-form.component";
 import {ContactFormComponent} from "./contact-form/contact-form.component";
-import {SmartadminModule} from "../../shared/smartadmin.module";
+import {uapiModule} from "../../shared/uapi.module";
 import {BootstrapValidationComponent} from "./bootstrap-validation.component";
-import {SmartadminValidationModule} from "../../shared/forms/validation/smartadmin-validation.module";
+import {uapiValidationModule} from "../../shared/forms/validation/uapi-validation.module";
 import {bootstrapValidationRouting} from "./bootstrap-validation.routing";
 
 @NgModule({
   imports: [
-    SmartadminModule,
-    SmartadminValidationModule,
+    uapiModule,
+    uapiValidationModule,
     bootstrapValidationRouting
   ],
   declarations: [ MovieFormComponent, TogglingFormComponent, ContactFormComponent,

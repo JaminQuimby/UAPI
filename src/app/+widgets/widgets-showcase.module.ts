@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 
-import {SmartadminModule} from "../shared/smartadmin.module";
+import {uapiModule} from "../shared/uapi.module";
 import {routing} from "./widgets-showcase.routing";
 import {WidgetsShowcaseComponent} from "./widgets-showcase.component";
 
@@ -11,7 +11,7 @@ import {WidgetsShowcaseComponent} from "./widgets-showcase.component";
     WidgetsShowcaseComponent
   ],
   imports: [
-    SmartadminModule,
+    uapiModule,
     routing
   ],
   providers: [],

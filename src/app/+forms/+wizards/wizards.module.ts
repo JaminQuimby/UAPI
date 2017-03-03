@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { wizardsRouting } from './wizards.routing';
 import {WizardsComponent} from "./wizards.component";
-import {SmartadminModule} from "../../shared/smartadmin.module";
-import {SmartadminWizardsModule} from "../../shared/forms/wizards/smartadmin-wizards.module";
+import {uapiModule} from "../../shared/uapi.module";
+import {uapiWizardsModule} from "../../shared/forms/wizards/uapi-wizards.module";
 import {BasicWizardWidgetComponent} from "./basic-wizard-widget/basic-wizard-widget.component";
 import {FuelUxWizardWidgetComponent} from "./fuel-ux-wizard-widget/fuel-ux-wizard-widget.component";
 
@@ -11,8 +11,8 @@ import {FuelUxWizardWidgetComponent} from "./fuel-ux-wizard-widget/fuel-ux-wizar
   imports: [
     CommonModule,
     wizardsRouting,
-    SmartadminModule,
-    SmartadminWizardsModule
+    uapiModule,
+    uapiWizardsModule
   ],
   declarations: [WizardsComponent, BasicWizardWidgetComponent, FuelUxWizardWidgetComponent]
 })

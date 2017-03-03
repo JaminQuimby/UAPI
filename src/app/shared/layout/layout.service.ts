@@ -1,6 +1,6 @@
 import {Component, OnInit, Injectable} from '@angular/core';
 
-import {config} from '../smartadmin.config';
+import {config} from '../uapi.config';
 import {Observable, Subject, Subscription} from "rxjs/Rx";
 
 

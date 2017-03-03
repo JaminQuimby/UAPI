@@ -12,19 +12,19 @@ import {
 
 import {PopoverModule} from "ng2-popover";
 
-import {SmartadminLayoutModule} from './layout'
+import {uapiLayoutModule} from './layout'
 
 import {I18nModule} from "./i18n/i18n.module";
 import {UserModule} from "./user/user.module";
 import {VoiceControlModule} from "./voice-control/voice-control.module";
 
-import {SmartadminWidgetsModule} from "./widgets/smartadmin-widgets.module";
+import {uapiWidgetsModule} from "./widgets/uapi-widgets.module";
 
 import {UtilsModule} from "./utils/utils.module";
 // import {ChatModule} from "./chat/chat.module";
 import {StatsModule} from "./stats/stats.module";
 import {InlineGraphsModule} from "./graphs/inline/inline-graphs.module";
-import {SmartadminFormsLiteModule} from "./forms/smartadmin-forms-lite.module";
+import {uapiFormsLiteModule} from "./forms/uapi-forms-lite.module";
 import {SmartProgressbarModule} from "./ui/smart-progressbar/smart-progressbar.module";
 
 
@@ -53,19 +53,19 @@ import {SmartProgressbarModule} from "./ui/smart-progressbar/smart-progressbar.m
 
     PopoverModule,
 
-    SmartadminLayoutModule,
+    uapiLayoutModule,
 
     I18nModule,
 
     UtilsModule,
 
-    SmartadminFormsLiteModule,
+    uapiFormsLiteModule,
 
     SmartProgressbarModule,
 
     InlineGraphsModule,
 
-    SmartadminWidgetsModule,
+    uapiWidgetsModule,
 
     // ChatModule,
 
@@ -75,4 +75,4 @@ import {SmartProgressbarModule} from "./ui/smart-progressbar/smart-progressbar.m
 
   ]
 })
-export class SmartadminModule {}
+export class uapiModule {}

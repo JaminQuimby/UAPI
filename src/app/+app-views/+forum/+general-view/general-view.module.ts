@@ -2,14 +2,14 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {GeneralViewRoutingModule} from './general-view-routing.module';
 import {GeneralViewComponent} from './general-view.component';
-import {SmartadminLayoutModule} from "../../../shared/layout/layout.module";
+import {uapiLayoutModule} from "../../../shared/layout/layout.module";
 import {StatsModule} from "../../../shared/stats/stats.module";
 
 @NgModule({
   imports: [
     CommonModule,
     GeneralViewRoutingModule,
-    SmartadminLayoutModule,
+    uapiLayoutModule,
     StatsModule,
   ],
   declarations: [GeneralViewComponent]

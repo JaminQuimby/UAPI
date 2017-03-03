@@ -4,13 +4,13 @@ import { iconsRouting } from './icons.routing';
 import {FontAwesomeComponent} from "./+font-awesome/font-awesome.component";
 import {FlagsComponent} from "./+flags/flags.component";
 import {GlyphiconsComponent} from "./+glyphicons/glyphicons.component";
-import {SmartadminModule} from "../../shared/smartadmin.module";
+import {uapiModule} from "../../shared/uapi.module";
 
 @NgModule({
   imports: [
     CommonModule,
     iconsRouting,
-    SmartadminModule
+    uapiModule
   ],
   declarations: [FlagsComponent, FontAwesomeComponent, GlyphiconsComponent]
 })
