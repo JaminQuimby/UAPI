@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
-import {uapiWidgetsModule} from "../widgets/uapi-widgets.module";
+import {uapiWidgetsModule} from "../widgets/smartadmin-widgets.module";
 import {ChatService} from "./chat.service";
 import { ChatComponent } from './chat/chat.component';
 import { ChatUsersComponent } from './chat/chat-users.component';

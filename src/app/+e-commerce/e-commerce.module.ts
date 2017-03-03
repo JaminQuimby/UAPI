@@ -7,7 +7,7 @@ import {uapiLayoutModule} from "../shared/layout/layout.module";
 import {uapiWidgetsModule} from "../shared/widgets/uapi-widgets.module";
 import {StatsModule} from "../shared/stats/stats.module";
 import {routing} from "./e-commerce.routing";
-import {uapiDatatableModule} from "../shared/ui/datatable/uapi-datatable.module";
+import {uapiDatatableModule} from "../shared/ui/datatable/smartadmin-datatable.module";
 import {ShoppingCartComponent} from "./shopping-cart/shopping-cart.component";
 import {CarouselModule} from "ng2-bootstrap";
 

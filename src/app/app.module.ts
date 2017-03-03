@@ -37,7 +37,7 @@ type StoreType = {
 export const firebaseConfig = {
     apiKey: "AIzaSyDxe54iUhyUnuxqrHEdheI6Ly5lL82GzmE",
     authDomain: "uapi-89234.firebaseapp.com",
-    databaseURL: "https://uapi-89234.firebaseio.com",
+    databaseURL: "https://smartadmin-89234.firebaseio.com",
     storageBucket: "uapi-89234.appspot.com",
     messagingSenderId: "627658251470"
 };

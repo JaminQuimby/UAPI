@@ -12,7 +12,7 @@ import {ReplayComponent} from "./replay/replay.component";
 import {ComposeComponent} from "./compose/compose.component";
 import {OutlookService} from "./shared/outlook.service";
 import {MessageLabelsComponent} from "./shared/message-labels.component";
-import {uapiEditorsModule} from "../shared/forms/editors/uapi-editors.module";
+import {uapiEditorsModule} from "../shared/forms/editors/smartadmin-editors.module";
 
 @NgModule({
   declarations: [
