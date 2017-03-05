@@ -5,6 +5,7 @@ import { ProfileComponent } from './profile.component';
 import { uapiLayoutModule } from '../../shared/layout/layout.module';
 import { StatsModule } from '../../shared/stats/stats.module';
 import { SplitPipe } from '../../shared/pipes/split.pipe';
+import { PhonePipe } from '../../shared/pipes/phone.pipe';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { SplitPipe } from '../../shared/pipes/split.pipe';
     StatsModule,
     ProfileRoutingModule
   ],
-  declarations: [ProfileComponent, SplitPipe]
+  declarations: [ProfileComponent, SplitPipe, PhonePipe]
 })
 export class ProfileModule {
 }
