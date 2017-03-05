@@ -1,26 +1,26 @@
-import {Component, OnInit} from '@angular/core';
-import {UserService} from "../user.service";
-import {LayoutService} from "../../layout/layout.service";
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { LayoutService } from '../../layout/layout.service';
 
 @Component({
-
   selector: 'sa-login-info',
   templateUrl: './login-info.component.html',
 })
 export class LoginInfoComponent implements OnInit {
-
-  user:any;
+  public user: any = { 'email': '', 'displayName': '', 'photoURL': '' };
 
   constructor(
     private userService: UserService,
-              private layoutService: LayoutService) {
+    private layoutService: LayoutService) {
   }
 
   ngOnInit() {
     this.userService.getLoginInfo().subscribe(user => {
-      this.user = user
-    })
-
+      //  console.log(JSON.stringify(user.auth));
+      this.user.email = user.auth.email || '';
+      this.user.displayName = user.auth.displayName || '';
+      this.user.photoURL = user.auth.photoURL || './assets/img/avatars/user.png';
+    });
   }
 
   toggleShortcut() {

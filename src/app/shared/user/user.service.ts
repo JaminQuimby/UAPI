@@ -1,27 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Observable, Subject} from "rxjs/Rx";
-
-import {JsonApiService} from "../../core/api/json-api.service";
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs/Rx';
+import { AngularFire } from 'angularfire2';
+import { JsonApiService } from '../../core/api/json-api.service';
 
 @Injectable()
 export class UserService {
-
-  public user: Subject<any>;
-
-  public userInfo = {
-    username: 'Guest'
-  };
-
-  constructor(private jsonApiService:JsonApiService) {
-    this.user = new Subject();
+  constructor(public af: AngularFire) { }
+  getLoginInfo(): Observable<any> {
+    return this.af.auth.map(user => user = user).take(1);
   }
-
-  getLoginInfo():Observable<any> {
-    return this.jsonApiService.fetch('/user/login-info.json')
-      .do((user)=>{
-        this.userInfo = user;
-      this.user.next(user)
-    })
-  }
-
 }
