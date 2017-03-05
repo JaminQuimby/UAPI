@@ -13,6 +13,5 @@ export class SplitPipe implements PipeTransform {
         } else {
             return '';
         }
-
     }
 }
