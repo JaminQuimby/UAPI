@@ -14,8 +14,8 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 
 // Core providers
-import {CoreModule} from "./core/core.module";
-import {uapiLayoutModule} from "./shared/layout/layout.module";
+import { CoreModule } from './core/core.module';
+import { uapiLayoutModule } from './shared/layout/layout.module';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -35,18 +35,18 @@ type StoreType = {
 };
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyDxe54iUhyUnuxqrHEdheI6Ly5lL82GzmE",
-    authDomain: "uapi-89234.firebaseapp.com",
-    databaseURL: "https://smartadmin-89234.firebaseio.com",
-    storageBucket: "uapi-89234.appspot.com",
-    messagingSenderId: "627658251470"
+  apiKey: 'AIzaSyDxe54iUhyUnuxqrHEdheI6Ly5lL82GzmE',
+  authDomain: 'uapi-89234.firebaseapp.com',
+  databaseURL: 'https://uapi-89234.firebaseio.com',
+  storageBucket: 'uapi-89234.appspot.com',
+  messagingSenderId: '627658251470'
 };
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
   ],
@@ -70,7 +70,7 @@ export const firebaseConfig = {
   ]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef, public appState: AppState) {}
+  constructor(public appRef: ApplicationRef, public appState: AppState) { }
 
 
 }
