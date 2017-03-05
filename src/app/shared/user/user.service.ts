@@ -13,12 +13,15 @@ export class UserService {
       .take(1);
   }
 
-  getLoginDetails(uid): Observable<any> {
-    if (uid) {
-      return this.af.database
-        .object(`/users/${uid}/profile`)
-        .map(userDetail => userDetail = userDetail)
-        .take(1);
-    }
+  getLoginDetails(): Observable<any> {
+    /*
+    this.af.database
+    .object(`/users/${localStorage.getItem('uid')}/profile/`)
+    .set({ 'phone': '8434523717' })
+*/
+    return this.af.database
+      .object(`/users/${localStorage.getItem('uid')}/profile/`)
+      .map(userDetail => userDetail = userDetail)
+      .take(1);
   }
 }

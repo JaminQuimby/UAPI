@@ -18,20 +18,16 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
 
-    this.userService.getLoginInfo().subscribe(user => {
-      //  console.log(JSON.stringify(user.auth));
-      this.user.email = user.auth.email;
-      this.user.displayName = user.auth.displayName;
-      this.user.photoURL = user.auth.photoURL || './assets/img/avatars/user.png';
-   /*
-      this.userService.getLoginDetails(user.auth.email).subscribe(userDetail => {
-        //  console.log(JSON.stringify(user.auth));
-        this.user.phone = userDetail.phone;
-      });
-   */
+    this.userService.getLoginInfo().subscribe(data => {
+      // console.log(JSON.stringify(data));
+      this.user.email = data.auth.email;
+      this.user.displayName = data.auth.displayName;
+      this.user.photoURL = data.auth.photoURL || './assets/img/avatars/user.png';
     });
 
-
+    this.userService.getLoginDetails().subscribe(data => {
+      this.user.phone = data.phone;
+    });
   }
 
 }

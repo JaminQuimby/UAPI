@@ -67,10 +67,10 @@
                         <small> CEO, uapi</small>
                       </h1>
                       <ul class="list-unstyled">
-                        <li  *ngIf="!!user.phone">
+                        <li  *ngIf="user.phone">
                           <p class="text-muted">
-                            <i class="fa fa-phone" ></i>&#xA0;&#xA0; {{ user.phone | phone }}
-                            <!-- (<span class="txt-color-darken">313</span>) <span class="txt-color-darken">464</span> - <span class="txt-color-darken">6473 </span>-->
+                            <i class="fa fa-phone" ></i>&#xA0;&#xA0;
+                           (<span class="txt-color-darken"> {{ user.phone | phone:1 }} </span>) <span class="txt-color-darken"> {{ user.phone | phone:2 }} </span> - <span class="txt-color-darken"> {{ user.phone | phone:3 }}  </span>
                           </p>
                         </li>
                         <li>
