@@ -64,7 +64,8 @@
                     <div class="col-sm-6">
                       <h1>{{ user.displayName | split:0 }} <span class="semi-bold">{{ user.displayName | split:1 }}</span>
                         <br>
-                        <small> CEO, uapi</small>
+                        <small *ngIf="user.title"> {{user.title}},</small>
+                        <small *ngIf="user.company"> {{user.company}}</small>
                       </h1>
                       <ul class="list-unstyled">
                         <li  *ngIf="user.phone">
@@ -80,7 +81,7 @@
                         </li>
                         <li>
                           <p class="text-muted">
-                            <i class="fa fa-skype"></i>&#xA0;&#xA0;<span class="txt-color-darken">john12</span>
+                            <i class="fa fa-skype" *ngIf="user.skype"></i>&#xA0;&#xA0;<span class="txt-color-darken">{{user.skype}}</span>
                           </p>
                         </li>
                         <li>
