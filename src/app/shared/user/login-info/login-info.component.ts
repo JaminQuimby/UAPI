@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { LayoutService } from '../../layout/layout.service';
+import { UserInterface as IUser } from '../user.interface';
 
 @Component({
   selector: 'sa-login-info',
   templateUrl: './login-info.component.html',
 })
 export class LoginInfoComponent implements OnInit {
-  public user: any = { 'email': '', 'displayName': '', 'photoURL': '' };
+  public user: IUser = Object.assign({});
 
   constructor(
     private userService: UserService,

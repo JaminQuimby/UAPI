@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AngularFire } from 'angularfire2';
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,24 +10,24 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router, public af: AngularFire, public fb: FormBuilder) { }
-  ngOnInit() {  }
+  ngOnInit() { }
 
-public _form = this.fb.group({
+  public _form = this.fb.group({
     email: ["", Validators.required],
     password: ["", Validators.required]
   });
-    
-  login(event){
+
+  login(event) {
     event.preventDefault();
     let email = this._form.get('email').value;
     let password = this._form.get('password').value;
-    this.af.auth.login({"email":email,"password":password})
-    .then(
-        (success) => {
-            this.af.auth.subscribe(auth => console.log(auth));
-            this.router.navigate(['/dashboard/+analytics'])
+    this.af.auth.login({ 'email': email, 'password': password })
+      .then(
+      (success) => {
+        this.af.auth.subscribe(auth => console.log(auth));
+        this.router.navigate(['/dashboard/+analytics'])
       }).catch(
-        (err) => {
+      (err) => {
         console.log(err);
       })
   }

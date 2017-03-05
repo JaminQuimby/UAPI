@@ -5,12 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class SplitPipe implements PipeTransform {
-    transform(value: string, params: number): string {
-        let splits = value.split(' ');
-        if (splits.length > 1) {
-            return splits[params];
+    transform(value: string, num: number): string {
+        value = value || '';
+        let split = value.split(' ');
+        if (split.length > 1) {
+            return split[num];
         } else {
             return '';
         }
+
     }
 }
