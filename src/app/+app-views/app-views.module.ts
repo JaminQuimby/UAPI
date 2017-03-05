@@ -1,7 +1,7 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from '@angular/core';
+import { routing } from './app-views.routing';
+import { uapiModule } from '../shared/uapi.module';
 
-import {routing} from "./app-views.routing";
-import {uapiModule} from "../shared/uapi.module";
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import {uapiModule} from "../shared/uapi.module";
   ],
   imports: [
     uapiModule,
-    routing,
+    routing
 
   ],
   entryComponents: []

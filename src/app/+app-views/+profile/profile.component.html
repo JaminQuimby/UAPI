@@ -47,22 +47,22 @@
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-sm-3 profile-pic">
-                      <img src="assets/img/avatars/sunny-big.png" alt="demo user">
+                      <img src="{{ user.photoURL }}" alt="{{ user.photoURL }}">
 
                       <div class="padding-10">
-                        <h4 class="font-md"><strong>1,543</strong>
+                        <h4 class="font-md"><strong>0</strong>
                           <br>
-                          <small>Followers</small>
+                          <small>Bids</small>
                         </h4>
                         <br>
-                        <h4 class="font-md"><strong>419</strong>
+                        <h4 class="font-md"><strong>0</strong>
                           <br>
                           <small>Connections</small>
                         </h4>
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <h1>John <span class="semi-bold">Doe</span>
+                      <h1>{{ user.displayName | split:0 }} <span class="semi-bold">{{ user.displayName | split:0 }}</span>
                         <br>
                         <small> CEO, uapi</small>
                       </h1>
@@ -74,7 +74,7 @@
                         </li>
                         <li>
                           <p class="text-muted">
-                            <i class="fa fa-envelope"></i>&#xA0;&#xA0;<a href="mailto:simmons@uapi">ceo@uapi.com</a>
+                            <i class="fa fa-envelope"></i>&#xA0;&#xA0;<a href="mailto:{{user.email}}">{{user.email}}</a>
                           </p>
                         </li>
                         <li>
@@ -352,8 +352,8 @@
             <div class="chat-body no-padding profile-message">
               <ul>
                 <li class="message">
-                  <img src="assets/img/avatars/sunny.png" class="online" alt="sunny">
-													<span class="message-text"> <a href="" class="username">John Doe
+                  <img src="{{ user.photoURL }}" class="online" alt="{{ user.displayName }}" style="width:54px; height:50px;" />
+													<span class="message-text"> <a href="" class="username">{{ user.displayName }}
                                                         <small class="text-muted pull-right ultra-light"> 2 Minutes
                                                             ago
                                                         </small>
@@ -425,7 +425,7 @@
               <ul>
                 <li class="message">
                   <img src="assets/img/avatars/1.png" class="online" alt="user">
-                <span class="message-text"> <a href="" class="username">John Doe
+                <span class="message-text"> <a href="" class="username">{{ user.displayName }}
                     <small class="text-muted pull-right ultra-light"> 2 Minutes ago</small>
                 </a> Can't divide were divide fish forth fish to. Was can't form the, living life grass darkness very image let unto fowl isn't in blessed fill life yielding above all moved </span>
                   <ul class="list-inline font-xs">
