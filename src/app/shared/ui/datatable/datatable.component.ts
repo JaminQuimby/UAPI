@@ -10,8 +10,8 @@ declare var $: any;
         <ng-content></ng-content>
       </table>
 `,
-  styles: [
-    require('smartadmin-plugins/datatables-bundle/datatables.min.css')
+ styleUrls: [
+   '../../../../../node_modules/smartadmin-plugins/datatables-bundle/datatables.min.css'
   ]
 })
 export class DatatableComponent implements OnInit {
