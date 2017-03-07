@@ -1,9 +1,8 @@
 # uapi
 
-[live](http://sang2-shockwave.rhcloud.com) demo
 
 ## Note
-Starting from version 0.3.1 we get integrated angular-cli back. This template consist of many libraries and not all of them support AOT compilation. But as soon as we get this resolved we will introduce AOT compilable version 
+This template consist of many libraries and not all of them support AOT compilation. But as soon as we get this resolved we will introduce AOT compilable version 
 
 ## Prerequisites
 
@@ -179,7 +178,6 @@ App is configured for running end-to-end (via [Protractor](http://www.protractor
 
 
 ## resources
-- [live project demo](http://sang2-shockwave.rhcloud.com)
 - [webpack 2 docs](https://webpack.js.org)
 - [angular-cli docs](https://github.com/angular/angular-cli)
 
