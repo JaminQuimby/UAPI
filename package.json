@@ -121,11 +121,9 @@
     "url-loader": "^0.5.7"
   },
   "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/grigson/smartadmin-angular-2"
+    "type": "git"
   },
   "bugs": {
-    "url": "https://bitbucket.org/grigson/smartadmin-angular-2/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
