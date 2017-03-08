@@ -20,7 +20,8 @@ export class LoginInfoComponent implements OnInit {
       //  console.log(JSON.stringify(user.auth));
       this.user.email = user.auth.email || '';
       this.user.displayName = user.auth.displayName || 'Hello Friend';
-      this.user.photoURL = user.auth.photoURL || './assets/img/avatars/user.png';
+      this.user.photoURL = this.userService.getProfilePicture(user.auth.email)
+        || './assets/img/avatars/user.png';
     });
   }
 

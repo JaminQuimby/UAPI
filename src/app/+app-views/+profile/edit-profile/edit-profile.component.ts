@@ -13,6 +13,7 @@ import { UserInterface as IUser } from '../../../shared/user/user.interface';
 
 
 export class EditProfileComponent implements OnInit {
+  
   private user: IUser = Object.assign({});
   @Output()
   private closeEditor: EventEmitter<boolean> = new EventEmitter();
@@ -28,12 +29,12 @@ export class EditProfileComponent implements OnInit {
   constructor(private userService: UserService, private fb: FormBuilder) { }
 
   ngOnInit() {
-    /*
+    
     this.userService.getLoginInfo().subscribe(data => {
       this.user.displayName = data.auth.displayName || 'Hello Friend';
       this.user.photoURL = data.auth.photoURL || './assets/img/avatars/user.png';
     });
-*/
+
     this.userService.getLoginDetails().subscribe(data => {
       this.user.phone = data.phone;
       this.user.firstName = data.firstName;
