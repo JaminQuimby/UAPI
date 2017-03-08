@@ -90,6 +90,7 @@
     "summernote": "^0.8.1",
     "to-markdown": "^3.0.1",
     "ts-helpers": "^1.1.1",
+    "ts-md5": "^1.2.0",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
@@ -124,8 +125,7 @@
   "repository": {
     "type": "git"
   },
-  "bugs": {
-  },
+  "bugs": {},
   "engines": {
     "node": ">= 4.2.1",
     "npm": ">= 3"

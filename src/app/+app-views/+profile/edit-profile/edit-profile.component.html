@@ -25,9 +25,9 @@
     <!-- widget content -->
     <div class="widget-body no-padding">
 
-      <form class="smart-form">
+      <form class="smart-form" [formGroup]="profileEditForm" (ngSubmit)="doSaveProfile(f)" >
         <header>
-          Standard Form Header
+          Your Profile
         </header>
 
         <fieldset>
@@ -35,19 +35,19 @@
           <section>
             <label class="label">First Name</label>
             <label class="input">
-                      <input type="text" maxlength="20">
+                      <input formControlName="firstname" type="text" maxlength="20">
                     </label>
           </section>
           <section>
             <label class="label">Last Name</label>
             <label class="input">
-                      <input type="text" maxlength="20">
+                      <input formControlName="lastname"  type="text" maxlength="20">
                     </label>
           </section>
           <section>
             <label class="label">Phone</label>
             <label class="input">
-                      <input type="text" maxlength="10">
+                      <input formControlName="phone" type="text" maxlength="10">
                     </label>
           </section>
 

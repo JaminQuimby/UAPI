@@ -13,8 +13,8 @@ import { UserInterface as IUser } from '../../shared/user/user.interface';
 
 export class ProfileComponent implements OnInit {
   public user: IUser = Object.assign({});
-  @Input()
-  public isEditor: boolean = false;
+
+  private isEditor: boolean = false;
 
   constructor(private userService: UserService) { }
 
@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  public onEdit(event: any): void {
+  private onEdit(event: any): void {
 
     this.isEditor = !this.isEditor;
 
