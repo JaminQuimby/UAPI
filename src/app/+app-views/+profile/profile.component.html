@@ -8,17 +8,23 @@
   <!-- end row -->
   <!-- row -->
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" *ngIf="isEditor">
+      <edit-profile (closeEditor)='onEdit()' ></edit-profile>
+    </div>
+    <div class="col-sm-12" *ngIf="!isEditor">
       <div class="well well-sm">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="well well-light well-sm no-margin no-padding">
               <div class="row">
-                <div class="col-sm-12">
+
+
+                <div class="col-sm-12" >
+
                   <div id="myCarousel" class="carousel fade profile-carousel">
                     <div class="air air-bottom-right padding-10">
-                      <a href="" class="btn txt-color-white bg-color-teal btn-sm"><i class="fa fa-check"></i> Edit</a>&#xA0;
-                      <a href="" class="btn txt-color-white bg-color-pinkDark btn-sm"><i class="fa fa-link"></i> Connect</a>
+                      <a class="btn txt-color-white bg-color-teal btn-sm" (click)="onEdit()"><i class="fa fa-check"></i> Edit</a>&#xA0;
+                      <a class="btn txt-color-white bg-color-pinkDark btn-sm"><i class="fa fa-link"></i> Connect</a>
                     </div>
                     <div class="air air-top-left padding-10">
                       <h4 class="txt-color-white font-md">Jan 1, 2014</h4>
@@ -62,16 +68,16 @@
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <h1>{{ user.displayName | split:0 }} <span class="semi-bold">{{ user.displayName | split:1 }}</span>
+                      <h1>{{ user.displayName | split:1 }} <span class="semi-bold">{{ user.displayName | split:2 }}</span>
                         <br>
                         <small *ngIf="user.title"> {{user.title}},</small>
                         <small *ngIf="user.company"> {{user.company}}</small>
                       </h1>
                       <ul class="list-unstyled">
-                        <li  *ngIf="user.phone">
+                        <li *ngIf="user.phone">
                           <p class="text-muted">
-                            <i class="fa fa-phone" ></i>&#xA0;&#xA0;
-                           (<span class="txt-color-darken"> {{ user.phone | phone:1 }} </span>) <span class="txt-color-darken"> {{ user.phone | phone:2 }} </span> - <span class="txt-color-darken"> {{ user.phone | phone:3 }}  </span>
+                            <i class="fa fa-phone"></i>&#xA0;&#xA0; (
+                            <span class="txt-color-darken"> {{ user.phone | phone:1 }} </span>) <span class="txt-color-darken"> {{ user.phone | phone:2 }} </span>                            - <span class="txt-color-darken"> {{ user.phone | phone:3 }}  </span>
                           </p>
                         </li>
                         <li>

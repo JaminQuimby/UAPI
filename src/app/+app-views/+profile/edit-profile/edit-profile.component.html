@@ -1,0 +1,73 @@
+<sa-widget [colorbutton]="false" [editbutton]="false" [custombutton]="false">
+  <!-- widget options:
+          usage: <div class="jarviswidget" id="wid-id-0" [editbutton]="false">
+
+          [colorbutton]="false"
+          [editbutton]="false"
+          [togglebutton]="false"
+          [deletebutton]="false"
+          [fullscreenbutton]="false"
+          [custombutton]="false"
+          [collapsed]="true"
+          [sortable]="false"
+
+          -->
+  <header>
+    <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+
+    <h2>Edit Profile</h2>
+
+  </header>
+
+  <!-- widget div-->
+  <div>
+
+    <!-- widget content -->
+    <div class="widget-body no-padding">
+
+      <form class="smart-form">
+        <header>
+          Standard Form Header
+        </header>
+
+        <fieldset>
+
+          <section>
+            <label class="label">First Name</label>
+            <label class="input">
+                      <input type="text" maxlength="20">
+                    </label>
+          </section>
+          <section>
+            <label class="label">Last Name</label>
+            <label class="input">
+                      <input type="text" maxlength="20">
+                    </label>
+          </section>
+          <section>
+            <label class="label">Phone</label>
+            <label class="input">
+                      <input type="text" maxlength="10">
+                    </label>
+          </section>
+
+
+        </fieldset>
+
+        <footer>
+          <button type="submit" class="btn btn-primary">
+                    Submit
+                  </button>
+          <button type="button" class="btn btn-default"  (click)="onCancle()">
+                    Back
+                  </button>
+        </footer>
+      </form>
+
+    </div>
+    <!-- end widget content -->
+
+  </div>
+  <!-- end widget div -->
+
+</sa-widget>
