@@ -12,7 +12,11 @@ export class UserService {
   public getLoginInfo(): Observable<any> {
     return this.af.auth
       .map(user => {
-        let photoURL = {'auth':{ 'photoURL': '//gravatar.com/avatar/' + Md5.hashStr(user.auth.email) }};
+        let photoURL = {
+          'auth': {
+            'photoURL': '//gravatar.com/avatar/' + Md5.hashStr(user.auth.email)
+          }
+        };
         user = Object.assign(user, photoURL);
         return user;
       }).take(1);
