@@ -11,19 +11,19 @@ export class UserService {
   constructor(public af: AngularFire) { }
   public getLoginInfo(): Observable<any> {
     return this.af.auth
-      .map(user => user = user);
-    //      .take(1);
+      .map(user => {
+        let photoURL = {'auth':{ 'photoURL': '//gravatar.com/avatar/' + Md5.hashStr(user.auth.email) }};
+        user = Object.assign(user, photoURL);
+        return user;
+      }).take(1);
   }
 
   public getLoginDetails(): Observable<any> {
     return this.af.database
       .object(`/users/${localStorage.getItem('uid')}/profile/`)
-      .map(userDetail => {
-        let photoURL = { 'photoURL': '//gravatar.com/avatar/' + Md5.hashStr(userDetail.photoURL) };
-        userDetail = Object.assign(userDetail, photoURL);
-      });
-    //      .take(1);
+      .map(userDetail => userDetail = userDetail).take(1);
   }
+
 
   public setLoginDetails(data: UserInterface) {
     this.af.database

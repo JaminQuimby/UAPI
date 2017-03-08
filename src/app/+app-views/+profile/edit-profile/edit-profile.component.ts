@@ -40,6 +40,8 @@ export class EditProfileComponent implements OnInit {
       this.user.lastName = data.lastName;
       this.user.title = data.title;
       this.user.skype = data.skype;
+      this.user.photoURL = data.photoURL;
+      console.log(data.photoURL)
     });
   }
 
