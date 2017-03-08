@@ -4,6 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
+    "golive": "ng build --prod - --aot=false  && npm run precache && firebase deploy",
     "build:dev": "./node_modules/.bin/ng build",
     "build:prod": "./node_modules/.bin/ng build --prod --aot=false",
     "build": "npm run build:dev",

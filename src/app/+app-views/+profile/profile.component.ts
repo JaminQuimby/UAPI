@@ -21,8 +21,10 @@ export class ProfileComponent implements OnInit {
     this.userService.getLoginInfo().subscribe(data => {
       // console.log(JSON.stringify(data));
       this.user.email = data.auth.email;
-      this.user.displayName = data.auth.displayName;
+      this.user.displayName = data.auth.displayName || 'Hello Friend';
       this.user.photoURL = data.auth.photoURL || './assets/img/avatars/user.png';
+
+      console.log( this.user.displayName)
     });
 
     this.userService.getLoginDetails().subscribe(data => {

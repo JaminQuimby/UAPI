@@ -9,7 +9,7 @@ export class SplitPipe implements PipeTransform {
         value = value || '';
         let split = value.split(' ');
         if (split.length > 1) {
-            return split[num];
+            return split[num - 1 ];
         } else {
             return '';
         }
