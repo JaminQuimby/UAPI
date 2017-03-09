@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import { FadeInTop } from '../../shared/animations/fade-in-top.decorator';
 import { UserService } from '../../shared/user/user.service';
-import { UserInterface as IUser } from '../../shared/user/user.interface';
+import { UserModel } from '../../shared/user/user.model';
 
 
 @FadeInTop()
@@ -12,30 +12,44 @@ import { UserInterface as IUser } from '../../shared/user/user.interface';
 
 
 export class ProfileComponent implements OnInit {
-  public user: IUser = Object.assign({});
+  private user: UserModel = new UserModel();
 
   private isEditor: boolean = false;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private ref: ChangeDetectorRef) { }
 
   ngOnInit() {
 
-    this.userService.getLoginInfo().subscribe(data => {
-      // console.log(JSON.stringify(data));
-      this.user.email = data.auth.email;
-      this.user.displayName = data.auth.displayName || 'Hello Friend';
-      this.user.photoURL = data.auth.photoURL || './assets/img/avatars/user.png';
-    });
-
-    this.userService.getLoginDetails().subscribe(data => {
-      this.user.phone = data.phone;
-    });
+    this.userService.getLoginInfo()
+      .subscribe(
+      data => this.doProfileUpdate(data),
+      error => this.throwError(error),
+      () => this.ref.markForCheck()
+      );
+    this.userService.getLoginDetails()
+      .subscribe(
+      data => this.doProfileUpdate(data),
+      error => this.throwError(error),
+      () => this.ref.markForCheck()
+      );
   }
+  private doProfileUpdate(data): void {
+    this.user = Object.assign({}, this.user, data, data.auth);
+    if (typeof data.displayName === 'undefined') {
+      this.user.displayName = data.firstName + ' ' + data.lastName;
+    }
+    if (data.auth) {
+      this.user.photoURL = data.auth.photoURL
+        || this.userService.getProfilePicture(data.auth.email)
+        || './assets/img/avatars/user.png';
+    }
+  }
+  private throwError(error) { console.log(error); }
 
   private onEdit(event: any): void {
 
     this.isEditor = !this.isEditor;
-
+    this.ref.markForCheck();
     console.log(this.isEditor);
   }
 

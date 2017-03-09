@@ -9,7 +9,7 @@
   <!-- row -->
   <div class="row">
     <div class="col-sm-12" *ngIf="isEditor">
-      <edit-profile (closeEditor)='onEdit()' ></edit-profile>
+      <profile-edit (closeEditor)='onEdit()' ></profile-edit>
     </div>
     <div class="col-sm-12" *ngIf="!isEditor">
       <div class="well well-sm">
